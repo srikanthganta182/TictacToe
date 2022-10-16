@@ -8,7 +8,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-ra ch  build-and-publish:
+  build-and-publish:
     name: Build and Publish to Docker-Hub
     runs-on: ubuntu-latest
 
