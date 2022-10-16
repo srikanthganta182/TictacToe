@@ -36,7 +36,7 @@ jobs:
         run: npm test
 
   test-backend:
-    name: Test backend
+    name: Test - Backend
     runs-on: ubuntu-latest
 
     steps:
@@ -52,7 +52,7 @@ jobs:
         run: mvn test
 
   build-and-publish:
-    name: Build and publish to docker-hub
+    name: Build and Publish to Docker-Hub
     runs-on: ubuntu-latest
 
     steps:
