@@ -13,28 +13,26 @@ jobs:
   test:
     name: Test - Frontend
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/main/frontend
     steps:
       # 1: setup node
       - name: Setup Node.js
         uses: actions/setup-node@v1
-        working-directory: src/main/frontend
         with:
           node-version: 12
 
       # 2: Checkout repository in the CWD
       - name: Checkout repository
         uses: actions/checkout@v2
-        working-directory: src/main/frontend
-
 
       # 3: install NPM dependencies
       - name: Install dependencies
-        working-directory: src/main/frontend
         run: npm install
 
       # 4: run test command
       - name: Run test command
-        working-directory: src/main/frontend
         run: npm test
   build:
 
